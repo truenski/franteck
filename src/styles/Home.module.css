@@ -47,8 +47,8 @@
   background-blend-mode: hue;
   width: var(--max-width);
   max-width: 100%;
-  margin-top: 100px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 3px solid white;
   background: url("/1.jpg") fixed, linear-gradient(354deg, #1211113d, black);
   box-shadow: 0px 0px 10px white;
