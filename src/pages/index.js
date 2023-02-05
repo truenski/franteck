@@ -16,10 +16,10 @@ export default function Home() {
       setAtTop(window.pageYOffset === 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -41,7 +41,6 @@ export default function Home() {
     setTimeout(() => {
       setShowMarker(true);
     }, 2000);
-
   }, [isLoaded]);
 
   return (
@@ -54,10 +53,8 @@ export default function Home() {
       </Head>
       <main className={styles.main} id="main">
         <div className={styles.center}>
-          <div
-            className={styles.logoContainer}
-          >
-            <h1 className={inter.className} >FRANTECK BRASIL </h1>
+          <div className={styles.logoContainer}>
+            <h1 className={inter.className}>FRANTECK BRASIL </h1>
             <div className={styles.thirteen}>
               <Image
                 src="/franteck-logo.svg"
@@ -65,9 +62,9 @@ export default function Home() {
                 width={80}
                 height={81}
                 style={{
-                  position: 'relative',
-                  left: '-26px',
-                  top: '5px'
+                  position: "relative",
+                  left: "-26px",
+                  top: "5px",
                 }}
                 priority
               />
@@ -195,7 +192,13 @@ export default function Home() {
             nós, falar sobre seu projeto ou apenas dizer um olá, nos contate e
             responderemos o mais rápido possível.
           </p>
-          <button className={"mouse_scroll"} onClick={atTop ? handleScrollDown : undefined} style={atTop ? { opacity: 1 } : { userSelect: 'none', cursor: 'auto' }}>
+          <button
+            className={"mouse_scroll"}
+            onClick={atTop ? handleScrollDown : undefined}
+            style={
+              atTop ? { opacity: 1 } : { userSelect: "none", cursor: "auto" }
+            }
+          >
             <div className={"mouse"}>
               <div className={"wheel"}></div>
             </div>
@@ -213,15 +216,17 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h1 className={inter.className} >
+            <h1 className={inter.className}>
               <a
                 href={`https://www.google.com/maps?q=${"Rua Numa Pompílio Bitencourt, 129 - Pernambués, Salvador - BA"}`}
                 target="_blank"
-                rel="noopener noreferrer" >
-                Endereço <span>-&gt;</span></a>
+                rel="noopener noreferrer"
+              >
+                Endereço <span>-&gt;</span>
+              </a>
             </h1>
             <div>
-              <p className={inter.className} >
+              <p className={inter.className}>
                 Rua Numa Pompílio Bitencourt, n.129 -<br /> Pernambués, Salvador
                 - Bahia. Cep. 41100170.
               </p>
@@ -241,7 +246,6 @@ export default function Home() {
                           animation={google.maps.Animation.DROP}
                           position={{ lat: -12.9660773, lng: -38.4709059 }}
                           className={styles.marker}
-
                           options={{ label: { text: "Franteck Brasil" } }}
                         />
                       )}
@@ -271,9 +275,6 @@ export default function Home() {
               Serviços
             </h1>
             <li
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
               style={{
                 height: "min-content",
                 borderRadius: "var(--border-radius)",
@@ -289,9 +290,6 @@ export default function Home() {
             </li>
 
             <li
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
               style={{
                 height: "min-content",
                 borderRadius: "var(--border-radius)",
@@ -307,9 +305,6 @@ export default function Home() {
             </li>
 
             <li
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
               style={{
                 height: "min-content",
                 borderRadius: "var(--border-radius)",
@@ -321,6 +316,36 @@ export default function Home() {
             >
               <p className={`${inter.className} ${styles.services}`}>
                 <b> Pintura industrial e civil</b>
+              </p>
+            </li>
+
+            <li
+              style={{
+                height: "min-content",
+                borderRadius: "var(--border-radius)",
+                background: "rgba(var(--card-rgb), 0)",
+                border: "1px solid rgba(var(--card-border-rgb), 0)",
+                transition: "background 200ms, border 200ms",
+                listStyleType: "circle",
+              }}
+            >
+              <p className={`${inter.className} ${styles.services}`}>
+                <b> Reformas</b>
+              </p>
+            </li>
+
+            <li
+              style={{
+                height: "min-content",
+                borderRadius: "var(--border-radius)",
+                background: "rgba(var(--card-rgb), 0)",
+                border: "1px solid rgba(var(--card-border-rgb), 0)",
+                transition: "background 200ms, border 200ms",
+                listStyleType: "circle",
+              }}
+            >
+              <p className={`${inter.className} ${styles.services}`}>
+                <b> Mão de obra terceirizada</b>
               </p>
             </li>
 
