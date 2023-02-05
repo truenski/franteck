@@ -40,6 +40,7 @@
 }
 
 .grid {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -182,14 +183,22 @@
 }
 
 .footer {
+  background: darkred;
+  padding-right: 116px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 116px;
+  border-radius: 0 0 24px 24px;
+  z-index: 0;
+
   margin-top: 200px;
   white-space: nowrap;
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 274px;
+  top: 264px;
   gap: 5px;
-  right: -230px;
+  right: -368px;
   align-items: center;
 }
 
@@ -197,10 +206,10 @@
   background: linear-gradient(
       to right,
       rgb(249, 249, 250),
-      rgb(146, 228, 224),
+      rgb(228, 165, 146),
       rgb(255, 255, 255),
       rgb(249, 249, 250),
-      rgb(146, 228, 224)
+      rgb(228, 146, 146)
     )
     0 0 / 400% 100%;
   -webkit-text-fill-color: transparent;
@@ -338,6 +347,9 @@ li:hover .services {
   }
 
   .grid {
+    height: 220vh;
+    justify-content: start;
+    gap: 80px;
     flex-direction: column;
     margin-bottom: 0;
     text-align: center;
@@ -410,12 +422,17 @@ li:hover .services {
   }
 
   .footer {
-    top: 808px;
-    max-width: 90vw;
-    white-space: break-spaces;
+    top: 882px;
+    border-radius: 0;
     text-align: center;
-    left: -2.5vw;
+    width: 100vw;
+    white-space: initial;
+    left: -6.8vw;
     font-size: 12px;
+  }
+
+  .footer p {
+    width: 90vw;
   }
 
   .footer p {
