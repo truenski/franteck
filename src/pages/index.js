@@ -212,7 +212,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div
-            className={styles.card}
+            className={`${styles.card} ${styles.bottom}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -222,7 +222,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Endereço <span>-&gt;</span>
+                Onde Estamos <span>-&gt;</span>
               </a>
             </h1>
             <div>
@@ -232,7 +232,7 @@ export default function Home() {
               </p>
               {isLoaded && (
                 <div
-                  style={{ width: "360px", height: "300px", marginTop: "40px" }}
+                  style={{ width: "100vw", height: "350px", marginTop: "40px" }}
                   className={styles.mapContainer}
                 >
                   <GoogleMap
@@ -255,197 +255,205 @@ export default function Home() {
               )}
             </div>
           </div>
+          <div className={styles.wrapperTop}>
 
-          <ul
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "30px",
-              position: "relative",
-              height: " 500px",
-            }}
-          >
-            <h1
-              className={inter.className}
+            <ul
               style={{
                 display: "flex",
-                marginBottom: "5px",
+                flexDirection: "column",
+                gap: "34.5px",
+                position: "relative",
               }}
             >
-              Serviços
-            </h1>
-            <li
-              style={{
-                height: "min-content",
-                borderRadius: "var(--border-radius)",
-                background: "rgba(var(--card-rgb), 0)",
-                border: "1px solid rgba(var(--card-border-rgb), 0)",
-                transition: "background 200ms, border 200ms",
-                listStyleType: "circle",
-              }}
-            >
-              <p className={`${inter.className} ${styles.services}`}>
-                <b>Manutenção e montagens Ind.</b>
-              </p>
-            </li>
+              <h1
+                className={inter.className}
+                style={{
+                  display: "flex",
+                  marginBottom: "5px",
+                }}
+              >
+                Nossos Serviços
+              </h1>
+              <li
+                style={{
+                  height: "min-content",
+                  borderRadius: "var(--border-radius)",
+                  background: "rgba(var(--card-rgb), 0)",
+                  border: "1px solid rgba(var(--card-border-rgb), 0)",
+                  transition: "background 200ms, border 200ms",
+                  listStyleType: "circle",
+                }}
+              >
+                <p className={`${inter.className} ${styles.services}`}>
+                  <b>Manutenção e montagens Ind.</b>
+                </p>
+              </li>
 
-            <li
-              style={{
-                height: "min-content",
-                borderRadius: "var(--border-radius)",
-                background: "rgba(var(--card-rgb), 0)",
-                border: "1px solid rgba(var(--card-border-rgb), 0)",
-                transition: "background 200ms, border 200ms",
-                listStyleType: "circle",
-              }}
-            >
-              <p className={`${inter.className} ${styles.services}`}>
-                <b>Isolamento térmico</b>
-              </p>
-            </li>
+              <li
+                style={{
+                  height: "min-content",
+                  borderRadius: "var(--border-radius)",
+                  background: "rgba(var(--card-rgb), 0)",
+                  border: "1px solid rgba(var(--card-border-rgb), 0)",
+                  transition: "background 200ms, border 200ms",
+                  listStyleType: "circle",
+                }}
+              >
+                <p className={`${inter.className} ${styles.services}`}>
+                  <b>Isolamento térmico</b>
+                </p>
+              </li>
 
-            <li
-              style={{
-                height: "min-content",
-                borderRadius: "var(--border-radius)",
-                background: "rgba(var(--card-rgb), 0)",
-                border: "1px solid rgba(var(--card-border-rgb), 0)",
-                transition: "background 200ms, border 200ms",
-                listStyleType: "circle",
-              }}
-            >
-              <p className={`${inter.className} ${styles.services}`}>
-                <b> Pintura industrial e civil</b>
-              </p>
-            </li>
+              <li
+                style={{
+                  height: "min-content",
+                  borderRadius: "var(--border-radius)",
+                  background: "rgba(var(--card-rgb), 0)",
+                  border: "1px solid rgba(var(--card-border-rgb), 0)",
+                  transition: "background 200ms, border 200ms",
+                  listStyleType: "circle",
+                }}
+              >
+                <p className={`${inter.className} ${styles.services}`}>
+                  <b> Pintura industrial e civil</b>
+                </p>
+              </li>
 
-            <li
-              style={{
-                height: "min-content",
-                borderRadius: "var(--border-radius)",
-                background: "rgba(var(--card-rgb), 0)",
-                border: "1px solid rgba(var(--card-border-rgb), 0)",
-                transition: "background 200ms, border 200ms",
-                listStyleType: "circle",
-              }}
-            >
-              <p className={`${inter.className} ${styles.services}`}>
-                <b> Reformas</b>
-              </p>
-            </li>
+              <li
+                style={{
+                  height: "min-content",
+                  borderRadius: "var(--border-radius)",
+                  background: "rgba(var(--card-rgb), 0)",
+                  border: "1px solid rgba(var(--card-border-rgb), 0)",
+                  transition: "background 200ms, border 200ms",
+                  listStyleType: "circle",
+                }}
+              >
+                <p className={`${inter.className} ${styles.services}`}>
+                  <b> Reformas</b>
+                </p>
+              </li>
 
-            <li
-              style={{
-                height: "min-content",
-                borderRadius: "var(--border-radius)",
-                background: "rgba(var(--card-rgb), 0)",
-                border: "1px solid rgba(var(--card-border-rgb), 0)",
-                transition: "background 200ms, border 200ms",
-                listStyleType: "circle",
-              }}
-            >
-              <p className={`${inter.className} ${styles.services}`}>
-                <b> Mão de obra terceirizada</b>
-              </p>
-            </li>
+              <li
+                style={{
+                  height: "min-content",
+                  borderRadius: "var(--border-radius)",
+                  background: "rgba(var(--card-rgb), 0)",
+                  border: "1px solid rgba(var(--card-border-rgb), 0)",
+                  transition: "background 200ms, border 200ms",
+                  listStyleType: "circle",
+                }}
+              >
+                <p className={`${inter.className} ${styles.services}`}>
+                  <b> Mão de obra terceirizada</b>
+                </p>
+              </li>
 
-            <div className={styles.footer}>
-              <p className={inter.className} style={{ opacity: 0.7 }}>
-                CNPJ 33508769/0001-74
-              </p>
-              <p className={inter.className} style={{ opacity: 0.7 }}>
-                Desenvolvido por{" "}
-                <a
-                  className={styles.author}
-                  href="https://github.com/truenski"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b>Kesney Mendes</b>
-                </a>
-                . &nbsp; Franteck do Brasil manutenção indl.ltda ® 2023 Todos os
-                direitos reservados.
-              </p>
+            </ul>
+
+            <div style={{ height: "310" }}>
+              <h1
+                className={inter.className}
+                style={{
+                  alignItems: "center",
+                  marginBottom: "10px",
+                  marginLeft: "16px",
+                  display: "flex",
+                }}
+              >
+                Entre em Contato
+              </h1>
+              <a
+                href="mailto:franteck.brasil@outlook.com "
+                className={styles.card}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2 className={inter.className}>
+                  Email{" "}
+                  <Image
+                    src="/mail.svg"
+                    alt="13"
+                    style={{
+                      filter: "invert(1)",
+                    }}
+                    width={30}
+                    height={21}
+                    priority
+                  />
+                </h2>
+                <p className={inter.className}>franteck.brasil@outlook.com </p>
+              </a>
+
+              <a
+                href="tel:+55713240-6731"
+                className={styles.card}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2 className={inter.className}>
+                  Telefone{" "}
+                  <Image
+                    src="/phone.svg"
+                    alt="13"
+                    style={{
+                      filter: "invert(1)",
+                    }}
+                    width={30}
+                    height={21}
+                    priority
+                  />
+                </h2>
+                <p className={inter.className}>(71) 3240-6731 </p>
+              </a>
+
+              <a
+                href="https://wa.me//+557192198525"
+                className={styles.card}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2 className={inter.className}>
+                  Whatsapp{" "}
+                  <Image
+                    src="/whatsapp.svg"
+                    alt="13"
+                    style={{
+                      filter: "invert(1)",
+                    }}
+                    width={40}
+                    height={31}
+                    priority
+                  />
+                </h2>
+                <p className={inter.className}>(71) 9219-8525 </p>
+              </a>
             </div>
-          </ul>
-
-          <div style={{ height: "310" }}>
-            <h1
-              className={inter.className}
-              style={{
-                alignItems: "center",
-                marginBottom: "10px",
-                marginLeft: "16px",
-                display: "flex",
-              }}
-            >
-              Contato
-            </h1>
-            <a
-              href="mailto:franteck.brasil@outlook.com "
-              className={styles.card}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2 className={inter.className}>
-                Email{" "}
-                <Image
-                  src="/mail.svg"
-                  alt="13"
-                  style={{
-                    filter: "invert(1)",
-                  }}
-                  width={30}
-                  height={21}
-                  priority
-                />
-              </h2>
-              <p className={inter.className}>franteck.brasil@outlook.com </p>
-            </a>
-
-            <a
-              href="tel:+55713240-6731"
-              className={styles.card}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2 className={inter.className}>
-                Telefone{" "}
-                <Image
-                  src="/phone.svg"
-                  alt="13"
-                  style={{
-                    filter: "invert(1)",
-                  }}
-                  width={30}
-                  height={21}
-                  priority
-                />
-              </h2>
-              <p className={inter.className}>(71) 3240-6731 </p>
-            </a>
-
-            <a
-              href="https://wa.me//+557192198525"
-              className={styles.card}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2 className={inter.className}>
-                Whatsapp{" "}
-                <Image
-                  src="/whatsapp.svg"
-                  alt="13"
-                  style={{
-                    filter: "invert(1)",
-                  }}
-                  width={40}
-                  height={31}
-                  priority
-                />
-              </h2>
-              <p className={inter.className}>(71) 9219-8525 </p>
-            </a>
+          </div>
+          <div className={styles.footer}>
+            <Image
+              src="/franteck-icon.svg"
+              alt="13"
+              width={40}
+              height={40}
+              priority
+            />
+            <p className={inter.className} style={{ opacity: 0.7 }}>
+              CNPJ 33508769/0001-74
+            </p>
+            <p className={inter.className} style={{ opacity: 0.7 }}>
+              Desenvolvido por{" "}
+              <a
+                className={styles.author}
+                href="https://github.com/truenski"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <b>Kesney Mendes</b>
+              </a>
+              . &nbsp; Franteck do Brasil manutenção indl.ltda ® 2023 Todos os
+              direitos reservados.
+            </p>
           </div>
         </div>
       </main>

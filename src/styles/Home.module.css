@@ -39,25 +39,75 @@
   font-family: var(--font-mono);
 }
 
-.grid {
-  overflow: hidden;
+.wrapperTop {
   display: flex;
+  filter: hue-rotate(145deg) saturate(1.8) brightness(1.1);
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  justify-content: space-evenly;
+  /* background: linear-gradient(to right, #2a1b1b, rgba(var(--tile-end-rgb), 1)); */
+  background: url("/bg-sobre.jpg");
+  width: 100vw;
+  padding: 30px 0;
+}
+
+.bottom {
+  padding: 21px !important;
+  grid-area: bottom;
+  margin-bottom: 70px;
+  background: linear-gradient(
+    to bottom right,
+    #2a1b1b,
+    rgba(var(--tile-end-rgb), 1)
+  ) !important;
+  padding: 0 !important;
+
+  padding-top: 33px !important;
+}
+
+.bottom h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+.bottom:hover {
+  border: 1px solid transparent !important;
+  border: 1px solid transparent !important;
+}
+
+.bottom p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: fit-content;
+  margin-top: 15px !important;
+  margin-bottom: -15px !important;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px 0px;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". ."
+    "bottom bottom";
+  position: relative;
+  overflow: hidden;
+  /* display: flex; */
   flex-direction: row;
   justify-content: space-around;
-
   background-blend-mode: hue;
-  width: var(--max-width);
+  width: 100vw;
   max-width: 100%;
   margin-top: 20px;
-  margin-bottom: 20px;
-  border: 3px solid white;
-  background: url("/1.jpg") fixed, linear-gradient(354deg, #1211113d, black);
-  box-shadow: 0px 0px 10px white;
+  /* margin-bottom: 20px; */
+  border: 3px solid white, 0px;
+  background: url(/1.jpg) fixed, linear-gradient(354deg, #1211113d, black);
   background-position: top;
   background-size: cover;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   padding: 30px;
-  gap: 20px;
 }
 
 .card {
@@ -180,26 +230,34 @@
 
 .mapContainer {
   width: auto !important;
+  margin-bottom: 40px;
 }
 
 .footer {
-  background: midnightblue;
+  /* margin-left: -30px; */
   padding-right: 116px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   padding-left: 116px;
   border-radius: 0 0 24px 24px;
   z-index: 0;
-
   margin-top: 200px;
   white-space: nowrap;
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 264px;
+  bottom: 0px;
+  width: 100%;
   gap: 5px;
-  right: -368px;
   align-items: center;
+}
+
+.footer img {
+  filter: saturate(0) contrast(0) brightness(2);
+  /* display: none; */
+  position: absolute;
+  right: 30px;
+  top: 0px;
 }
 
 .author b:hover {
@@ -230,10 +288,6 @@
 
 li:hover .services {
   opacity: 1;
-}
-
-.mapContainer > div {
-  border-radius: 2%;
 }
 
 .logo,
@@ -324,6 +378,28 @@ li:hover .services {
     padding: 4rem;
   }
 
+  .bottom {
+    border-radius: 0;
+  }
+
+  .bottom h1 {
+    margin-bottom: 20px !important;
+  }
+
+  .bottom p {
+    margin-bottom: 20px !important;
+  }
+
+  .wrapperTop {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   .grid > .card {
     margin-bottom: -20px;
     padding: 0;
@@ -347,9 +423,9 @@ li:hover .services {
   }
 
   .grid {
-    height: 220vh;
+    /* height: auto; */
     justify-content: start;
-    gap: 80px;
+    gap: 0px;
     flex-direction: column;
     margin-bottom: 0;
     text-align: center;
@@ -363,6 +439,8 @@ li:hover .services {
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background: url(/1.jpg), linear-gradient(354deg, #1211113d, black);
+    border-bottom: none !important;
+    padding: 0;
   }
 
   .grid > a > h1,
@@ -378,7 +456,8 @@ li:hover .services {
 
   .mapContainer {
     margin-top: 30px !important;
-    margin-bottom: 0px !important;
+
+    margin-bottom: 137px !important;
   }
 
   .thirteen::after,
@@ -422,13 +501,25 @@ li:hover .services {
   }
 
   .footer {
-    top: 882px;
+    background: url(/1.jpg) fixed, linear-gradient(354deg, #1211113d, black);
+    bottom: 0 !important;
     border-radius: 0;
+
+    background-position: center;
     text-align: center;
-    width: 100vw;
+    background-size: cover;
     white-space: initial;
-    left: -6.8vw;
     font-size: 12px;
+    padding-bottom: 10px;
+  }
+
+  .footer img {
+    margin-bottom: 3px;
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 5px;
   }
 
   .footer p {
