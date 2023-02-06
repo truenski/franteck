@@ -378,8 +378,32 @@ li:hover .services {
     padding: 4rem;
   }
 
+  .wrapperTop > div > a {
+    margin-left: 20px;
+  }
+
+  .wrapperTop > div > a:first-of-type {
+    margin-top: 50px !important;
+  }
+
+  .grid ul > h1,
+  .wrapperTop > div > h1 {
+    display: flex;
+    width: fit-content;
+    padding-bottom: 10px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-bottom: 2px solid;
+    margin-bottom: 25px !important;
+  }
+
   .bottom {
     border-radius: 0;
+    background: linear-gradient(
+      to right,
+      #2a1b1b,
+      rgba(var(--tile-end-rgb), 1)
+    ) !important;
   }
 
   .bottom h1 {
@@ -394,10 +418,12 @@ li:hover .services {
     display: flex;
     flex-direction: column;
     gap: 80px;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(
+      to right,
+      #2a1b1b,
+      rgba(var(--tile-end-rgb), 1)
+    );
+    filter: none;
   }
 
   .grid > .card {
@@ -548,7 +574,7 @@ li:hover .services {
   }
 
   .grid h1 {
-    margin-bottom: 50px !important;
+    margin-bottom: 10px !important;
   }
 
   .center::before,
@@ -652,11 +678,6 @@ li:hover .services {
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
 
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
