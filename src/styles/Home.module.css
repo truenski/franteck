@@ -56,7 +56,7 @@
 .bottom {
   grid-area: bottom;
   margin-bottom: 70px;
-  background: radial-gradient(#000000a6, black), url(/3.jpg) fixed !important;
+  background: radial-gradient(#000000c4, black), url(/3.jpg) fixed !important;
   background-size: cover !important;
   background-position: bottom !important;
   padding-bottom: 0 !important;
