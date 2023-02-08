@@ -41,7 +41,7 @@
 
 .wrapperTop {
   display: flex;
-  filter: hue-rotate(145deg) saturate(1.8) brightness(1.1);
+  filter: hue-rotate(145deg) saturate(1.8) brightness(1.1) contrast(1.1);
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -50,20 +50,16 @@
   background: url("/bg-sobre.jpg");
   width: 100vw;
   padding: 30px 0;
+  z-index: 2;
 }
 
 .bottom {
-  padding: 21px !important;
   grid-area: bottom;
   margin-bottom: 70px;
-  background: linear-gradient(
-    to bottom right,
-    #2a1b1b,
-    rgba(var(--tile-end-rgb), 1)
-  ) !important;
-  padding: 0 !important;
-
-  padding-top: 33px !important;
+  background: radial-gradient(#000000a6, black), url(/3.jpg) fixed !important;
+  background-size: cover !important;
+  background-position: bottom !important;
+  padding-bottom: 0 !important;
 }
 
 .bottom h1 {
@@ -85,6 +81,9 @@
 }
 
 .grid {
+  margin-top: 100vh !important;
+  padding-top: 0 !important;
+  box-shadow: 1px 1px 70px black;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0px 0px;
@@ -100,10 +99,8 @@
   background-blend-mode: hue;
   width: 100vw;
   max-width: 100%;
-  margin-top: 20px;
   /* margin-bottom: 20px; */
   border: 3px solid white, 0px;
-  background: url(/1.jpg) fixed, linear-gradient(354deg, #1211113d, black);
   background-position: top;
   background-size: cover;
   /* border-radius: 30px; */
@@ -139,10 +136,16 @@
 }
 
 .center {
+  clip: rect(0, auto, auto, 0);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background-attachment: fixed !important;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   padding: 4rem 0;
 
   /* background: transparent; */
@@ -159,7 +162,6 @@
   height: 100vh;
   animation: blur 2s;
   filter: blur(0px);
-  overflow: visible;
 }
 
 @keyframes blur {
@@ -201,7 +203,7 @@
 .center::after {
   content: "";
   position: absolute;
-  filter: blur(60px) hue-rotate(143deg);
+  filter: blur(60px) hue-rotate(342deg) saturate(0.8);
   transform: translateZ(0);
   opacity: 0;
   animation: zoomIn;
@@ -230,7 +232,11 @@
 
 .mapContainer {
   width: auto !important;
-  margin-bottom: 40px;
+  /* box-shadow: 1px 1px 6 0px black; */
+}
+
+.image {
+  margin-bottom: 30px;
 }
 
 .footer {
@@ -336,7 +342,7 @@ li:hover .services {
   border-radius: var(--border-radius);
   background: linear-gradient(
     to bottom right,
-    #2a1b1b,
+    black,
     rgba(var(--tile-end-rgb), 1)
   );
   background-clip: content-box;
@@ -394,16 +400,18 @@ li:hover .services {
     margin-left: auto !important;
     margin-right: auto !important;
     border-bottom: 2px solid;
-    margin-bottom: 25px !important;
+  }
+
+  .wrapperTop > ul {
+    margin-bottom: 50px !important;
   }
 
   .bottom {
     border-radius: 0;
-    background: linear-gradient(
-      to right,
-      #2a1b1b,
-      rgba(var(--tile-end-rgb), 1)
-    ) !important;
+    background: linear-gradient(to right, black, black) !important;
+
+    margin-bottom: 50px;
+    padding-top: 10px;
   }
 
   .bottom h1 {
@@ -418,11 +426,8 @@ li:hover .services {
     display: flex;
     flex-direction: column;
     gap: 80px;
-    background: linear-gradient(
-      to right,
-      #2a1b1b,
-      rgba(var(--tile-end-rgb), 1)
-    );
+    background: radial-gradient(#161515, black);
+    /* linear-gradient(to right, black, rgba(var(--tile-end-rgb), 1)) */
     filter: none;
   }
 
@@ -458,13 +463,11 @@ li:hover .services {
     border-radius: unset;
     border-left: none;
     border-right: none;
-    box-shadow: 0 0 0px white;
     border-top: none;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     background-position: 10% 20% !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    background: url(/1.jpg), linear-gradient(354deg, #1211113d, black);
     border-bottom: none !important;
     padding: 0;
   }
@@ -494,6 +497,7 @@ li:hover .services {
   .image {
     margin-bottom: 30px;
     margin-top: 30px !important;
+    filter: hue-rotate(332deg) saturate(2);
   }
 
   .center > h1:last-of-type {
@@ -527,13 +531,17 @@ li:hover .services {
   }
 
   .footer {
-    background: url(/1.jpg) fixed, linear-gradient(354deg, #1211113d, black);
     bottom: 0 !important;
     border-radius: 0;
+    padding-top: 20px;
+    filter: saturate(1) brightness(1.1) contrast(1.25);
 
-    background-position: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+      url(/11.jpeg);
+    background-position: top;
     text-align: center;
     background-size: cover;
+    background-repeat: no-repeat;
     white-space: initial;
     font-size: 12px;
     padding-bottom: 10px;
@@ -579,7 +587,7 @@ li:hover .services {
 
   .center::before,
   .center::after {
-    filter: blur(60px) hue-rotate(143deg) saturate(0.5);
+    filter: blur(60px) hue-rotate(342deg) saturate(0.8);
   }
 
   .center::before {
