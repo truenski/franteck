@@ -47,7 +47,7 @@
   background-repeat: no-repeat !important;
   justify-content: space-evenly;
   mix-blend-mode: hard-light;
-  filter: brightness(1.1) saturate(1.1) contrast(1.1);
+  filter: brightness(1) saturate(1.1) contrast(1);
   background-blend-mode: color-dodge;
   background: url(/bg-sobre.jpg), linear-gradient(136deg, #ba7a3bc9, #cfc87b00);
   /* background: linear-gradient(to right, #2a1b1b, rgba(var(--tile-end-rgb), 1)); */
