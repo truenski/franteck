@@ -79,7 +79,7 @@ export default function Home() {
             data-aos-easing="ease-out-quart"
             data-aos-anchor={"#main"}
             style={{
-              filter: 'hue-rotate(332deg) saturate(2)'
+              filter: 'hue-rotate(332deg) saturate(2)',
             }}
           >
             <svg

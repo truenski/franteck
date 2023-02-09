@@ -41,13 +41,19 @@
 
 .wrapperTop {
   display: flex;
-  filter: hue-rotate(145deg) saturate(1.8) brightness(1.1) contrast(1.1);
+  /* filter: hue-rotate(145deg) saturate(1.8) brightness(1.1) contrast(1.1); */
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   justify-content: space-evenly;
+  mix-blend-mode: hard-light;
+  filter: brightness(1.1) saturate(1.1) contrast(1.1);
+  background-blend-mode: color-dodge;
+  background: url(/bg-sobre.jpg), linear-gradient(136deg, #ba7a3bc9, #cfc87b00);
   /* background: linear-gradient(to right, #2a1b1b, rgba(var(--tile-end-rgb), 1)); */
-  background: url("/bg-sobre.jpg");
+  /* background: url("/bg-sobre.jpg"); */
+  /* url(/bg-sobre.jpg), #3C64A2 */
+  /* 75vw 100% !important */
   width: 100vw;
   padding: 30px 0;
   z-index: 2;
@@ -82,9 +88,9 @@
 }
 
 .grid {
-  margin-top: 100vh !important;
+  /* margin-top: 100vh !important; */
   padding-top: 0 !important;
-  box-shadow: 1px 1px 70px black;
+  /* box-shadow: 1px 1px 70px black; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0px 0px;
@@ -139,7 +145,7 @@
 .center {
   clip: rect(0, auto, auto, 0);
   overflow: hidden;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
   background-attachment: fixed !important;
@@ -160,7 +166,7 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  height: 58vh;
   animation: blur 2s;
   filter: blur(0px);
 }
@@ -217,7 +223,7 @@
 @keyframes zoomIn {
   from {
     opacity: 0;
-    filter: blur(300px);
+    filter: blur(300px) hue-rotate(342deg) saturate(0.8);
     rotate: (0deg);
   }
   to {
@@ -237,6 +243,7 @@
 }
 
 .image {
+  display: none;
   margin-bottom: 30px;
 }
 
@@ -267,21 +274,31 @@
   top: 0px;
 }
 
-.author b:hover {
-  background: linear-gradient(
-      to right,
-      rgb(249, 249, 250),
-      rgb(228, 165, 146),
-      rgb(255, 255, 255),
-      rgb(249, 249, 250),
-      rgb(228, 146, 146)
-    )
-    0 0 / 400% 100%;
+.author b {
+  background: linear-gradient(to right, #f37849, #ebb569);
   -webkit-text-fill-color: transparent;
 
   -webkit-background-clip: text;
   background-clip: text;
-  animation: animate-gradient 2s linear infinite;
+}
+
+.author b:hover {
+  background: linear-gradient(
+      to right,
+      #f37849,
+      #ebb569,
+      rgb(106, 106, 241),
+      blue,
+      #ebb569,
+      #f37849
+    )
+    0 0 / 400% 100%;
+
+  -webkit-text-fill-color: transparent;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: animate-gradient 2s infinite linear;
 }
 
 @keyframes animate-gradient {
@@ -318,6 +335,7 @@ li:hover .services {
 
 .thirteen::before,
 .thirteen::after {
+  display: none;
   content: "";
   position: absolute;
   z-index: -1;
@@ -333,7 +351,7 @@ li:hover .services {
   animation: 6s rotate linear infinite;
   width: 200%;
   height: 200%;
-  background: var(--tile-border);
+  background: none;
 }
 
 /* Inner Square */
@@ -341,11 +359,12 @@ li:hover .services {
   inset: 0;
   padding: 1px;
   border-radius: var(--border-radius);
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom right,
     black,
     rgba(var(--tile-end-rgb), 1)
-  );
+  ); */
+  background: linear-gradient(to bottom right, #0101029c, #26282b);
   background-clip: content-box;
 }
 
@@ -409,10 +428,10 @@ li:hover .services {
 
   .bottom {
     border-radius: 0;
-    background: linear-gradient(to right, black, black) !important;
+    background: rgb(31 30 30 / 91%) !important;
 
     margin-bottom: 50px;
-    padding-top: 10px;
+    padding-top: 15px !important ;
   }
 
   .bottom h1 {
@@ -424,17 +443,21 @@ li:hover .services {
   }
 
   .wrapperTop {
+    mix-blend-mode: normal;
     display: flex;
     flex-direction: column;
     gap: 80px;
-    background: radial-gradient(#161515, black);
+    background: linear-gradient(351deg, #00000000, rgb(53 52 52 / 91%));
     /* linear-gradient(to right, black, rgba(var(--tile-end-rgb), 1)) */
     filter: none;
   }
 
   .grid > .card {
     margin-bottom: -20px;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px !important;
+    margin-top: -20px;
   }
 
   .grid > .card h1,
@@ -496,6 +519,7 @@ li:hover .services {
   }
 
   .image {
+    display: block;
     margin-bottom: 30px;
     margin-top: 30px !important;
     filter: hue-rotate(332deg) saturate(2);
@@ -535,9 +559,8 @@ li:hover .services {
     bottom: 0 !important;
     border-radius: 0;
     padding-top: 20px;
-    filter: saturate(1) brightness(1.1) contrast(1.25);
 
-    background: linear-gradient(180deg, rgb(4 3 3 / 88%), rgba(0, 0, 0, 0)),
+    background: linear-gradient(180deg, rgb(4 3 3 / 33%), rgba(0, 0, 0, 0)),
       url(/11.jpeg);
 
     background-position: top;
@@ -621,6 +644,7 @@ li:hover .services {
   .center {
     padding: 8rem 0 6rem;
     background-size: cover;
+    height: 100vh;
     background-position: bottom;
   }
 
