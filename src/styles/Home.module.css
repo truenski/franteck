@@ -406,6 +406,7 @@ li:hover .services {
 
   .wrapperTop > div > a {
     margin-left: 20px;
+    width: 90vw;
   }
 
   .wrapperTop > div > a:first-of-type {
@@ -450,6 +451,31 @@ li:hover .services {
     /* background: url(/bg-sobre.jpg), linear-gradient(136deg, #bd4011, #010c2b); */
     /* linear-gradient(to right, black, rgba(var(--tile-end-rgb), 1)) */
     /* filter: none; */
+    background: none;
+    position: relative;
+    filter: none;
+  }
+
+  .wrapperTop::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    -webkit-filter: brightness(1) saturate(1.1) contrast(1) blur(3px); /* Google Chrome, Safari 6+ & Opera 15+ */
+    z-index: -1;
+    /* filter: hue-rotate(145deg) saturate(1.8) brightness(1.1) contrast(1.1); */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    justify-content: space-evenly;
+    mix-blend-mode: hard-light;
+    filter: brightness(1) saturate(1.1) contrast(1) blur(2px);
+    background-blend-mode: color-dodge;
+    background: url(/bg-sobre.jpg),
+      linear-gradient(100deg, #ac310ba1 15%, #cfc87b00);
   }
 
   .grid > .card {
