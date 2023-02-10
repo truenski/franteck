@@ -428,7 +428,7 @@ li:hover .services {
 
   .bottom {
     border-radius: 0;
-    background: rgb(31 30 30 / 91%) !important;
+    /* background: rgb(31 30 30 / 91%) !important; */
 
     margin-bottom: 50px;
     padding-top: 15px !important ;
@@ -443,13 +443,13 @@ li:hover .services {
   }
 
   .wrapperTop {
-    mix-blend-mode: normal;
+    /* mix-blend-mode: normal; */
     display: flex;
     flex-direction: column;
     gap: 80px;
-    background: linear-gradient(351deg, #00000000, rgb(53 52 52 / 91%));
+    /* background: url(/bg-sobre.jpg), linear-gradient(136deg, #bd4011, #010c2b); */
     /* linear-gradient(to right, black, rgba(var(--tile-end-rgb), 1)) */
-    filter: none;
+    /* filter: none; */
   }
 
   .grid > .card {
@@ -560,8 +560,8 @@ li:hover .services {
     border-radius: 0;
     padding-top: 20px;
 
-    background: linear-gradient(180deg, rgb(4 3 3 / 33%), rgba(0, 0, 0, 0)),
-      url(/11.jpeg);
+    /* background: linear-gradient(180deg, rgb(4 3 3 / 33%), rgba(0, 0, 0, 0)),
+      url(/11.jpeg); */
 
     background-position: top;
     text-align: center;
